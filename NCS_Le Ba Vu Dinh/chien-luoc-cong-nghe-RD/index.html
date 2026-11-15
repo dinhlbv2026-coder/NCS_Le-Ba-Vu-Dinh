@@ -6,7 +6,7 @@
 <style>
 /* Bố cục: sân khấu 1920x1080 co giãn vừa khung nhìn; nền động (mạng lưới, vòng sáng trôi theo từng slide), nội dung xuất hiện lần lượt, logo Tây Đô trượt giữa các vị trí. */
 :root{
-  --bg:#FCFDFF; --bg2:#FFFFFF; --card:#FFFFFF; --ink:#0F172A; --ink2:#3F4C63; --ink3:#64748B; --line:#E2E8F0;
+  --bg:#FFFFFF; --bg2:#FFFFFF; --card:#FFFFFF; --ink:#0F172A; --ink2:#3F4C63; --ink3:#64748B; --line:#E2E8F0;
   --cy:#0EA5E9; --cyd:#1D4ED8; --blue:#2563EB; --am:#6366F1; --amd:#4338CA; --amsoft:#EEF2FF; --chip:#EFF6FF;
   --net:37,99,235; --shadow:0 18px 44px rgba(37,99,235,.10);
   --f-d:"Plus Jakarta Sans","Inter",system-ui,sans-serif; --f-b:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -25,14 +25,14 @@ html,body{height:100%}
 body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--f-b);overflow:hidden;display:flex;flex-direction:column}
 #viewport{flex:1;min-height:0;position:relative;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 #stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:radial-gradient(1100px 680px at 100% 0%,var(--glow1),transparent 62%),radial-gradient(1000px 700px at 0% 100%,var(--glow2),transparent 60%),linear-gradient(160deg,var(--bg2),var(--bg));border-radius:28px;box-shadow:var(--shadow);font-size:33px}
-#net{position:absolute;inset:0;width:1920px;height:1080px;opacity:.22}
+#net{position:absolute;inset:0;width:1920px;height:1080px;opacity:.14}
 #ai{position:absolute;inset:0;width:1920px;height:1080px;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
 #stage.cover #ai{opacity:1}
-#tiles{position:absolute;inset:0;pointer-events:none;opacity:.13;transition:opacity 1.2s ease}
-#stage.cover #tiles{opacity:.7}
+#tiles{position:absolute;inset:0;pointer-events:none;opacity:.08;transition:opacity 1.2s ease}
+#stage.cover #tiles{opacity:.34}
 #tiles i{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);background:var(--c);transform:rotate(45deg);box-shadow:0 14px 28px rgba(37,99,235,.10);animation:bob 10s ease-in-out infinite;animation-delay:var(--dl)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #tiles{opacity:.12}}:root[data-theme="dark"] #tiles{opacity:.12}
-.orb{position:absolute;left:0;top:0;width:760px;height:760px;border-radius:50%;opacity:.06;transition:transform 1.8s cubic-bezier(.65,0,.2,1)}
+.orb{position:absolute;left:0;top:0;width:760px;height:760px;border-radius:50%;opacity:.04;transition:transform 1.8s cubic-bezier(.65,0,.2,1)}
 .orb.o1{background:radial-gradient(circle,var(--cy),transparent 68%)}
 .orb.o2{background:radial-gradient(circle,var(--am),transparent 68%);opacity:.08}
 .orb.o3{background:radial-gradient(circle,var(--blue),transparent 68%);opacity:.06}
@@ -59,11 +59,11 @@ svg .a{transform-box:fill-box;transform-origin:center}
 .slide:not(.active) .draw{transition:stroke-dashoffset .01s .9s}
 
 /* bảng màu: Ngọc – Tím (mặc định), Xanh – Chàm, Chàm – San hô, Navy – Cyan */
-:root{--g1:#0D9488;--g2:#7C3AED;--gl1:#CCFBF1;--gl2:#99F6E4;--glow1:rgba(20,184,166,.07);--glow2:rgba(139,92,246,.05);--hue:-42deg}
+:root{--g1:#0D9488;--g2:#7C3AED;--gl1:#CCFBF1;--gl2:#99F6E4;--glow1:rgba(20,184,166,.035);--glow2:rgba(139,92,246,.025);--hue:-42deg}
 :root{--cy:#14B8A6;--cyd:#0F766E;--blue:#0D9488;--am:#8B5CF6;--amd:#6D28D9;--amsoft:#F5F3FF;--chip:#F0FDFA;--net:13,148,136;--shadow:0 18px 44px rgba(13,148,136,.10)}
-:root[data-pal="blue"]{--g1:#2563EB;--g2:#4F46E5;--gl1:#E0F2FE;--gl2:#BAE6FD;--glow1:rgba(14,165,233,.06);--glow2:rgba(99,102,241,.05);--hue:0deg;--cy:#0EA5E9;--cyd:#1D4ED8;--blue:#2563EB;--am:#6366F1;--amd:#4338CA;--amsoft:#EEF2FF;--chip:#EFF6FF;--net:37,99,235;--shadow:0 18px 44px rgba(37,99,235,.10)}
-:root[data-pal="coral"]{--g1:#4F46E5;--g2:#DB2777;--gl1:#FFE4E6;--gl2:#FECDD3;--glow1:rgba(99,102,241,.06);--glow2:rgba(244,63,94,.05);--hue:25deg;--cy:#6366F1;--cyd:#4338CA;--blue:#4F46E5;--am:#F43F5E;--amd:#BE123C;--amsoft:#FFF1F2;--chip:#EEF2FF;--net:79,70,229;--shadow:0 18px 44px rgba(79,70,229,.10)}
-:root[data-pal="navy"]{--g1:#1E3A8A;--g2:#0891B2;--gl1:#CFFAFE;--gl2:#A5F3FC;--glow1:rgba(6,182,212,.07);--glow2:rgba(30,58,138,.05);--hue:-18deg;--cy:#06B6D4;--cyd:#1E40AF;--blue:#1E3A8A;--am:#0891B2;--amd:#0E7490;--amsoft:#ECFEFF;--chip:#ECFEFF;--net:30,58,138;--shadow:0 18px 44px rgba(30,58,138,.10)}
+:root[data-pal="blue"]{--g1:#2563EB;--g2:#4F46E5;--gl1:#E0F2FE;--gl2:#BAE6FD;--glow1:rgba(14,165,233,.035);--glow2:rgba(99,102,241,.025);--hue:0deg;--cy:#0EA5E9;--cyd:#1D4ED8;--blue:#2563EB;--am:#6366F1;--amd:#4338CA;--amsoft:#EEF2FF;--chip:#EFF6FF;--net:37,99,235;--shadow:0 18px 44px rgba(37,99,235,.10)}
+:root[data-pal="coral"]{--g1:#4F46E5;--g2:#DB2777;--gl1:#FFE4E6;--gl2:#FECDD3;--glow1:rgba(99,102,241,.035);--glow2:rgba(244,63,94,.025);--hue:25deg;--cy:#6366F1;--cyd:#4338CA;--blue:#4F46E5;--am:#F43F5E;--amd:#BE123C;--amsoft:#FFF1F2;--chip:#EEF2FF;--net:79,70,229;--shadow:0 18px 44px rgba(79,70,229,.10)}
+:root[data-pal="navy"]{--g1:#1E3A8A;--g2:#0891B2;--gl1:#CFFAFE;--gl2:#A5F3FC;--glow1:rgba(6,182,212,.035);--glow2:rgba(30,58,138,.025);--hue:-18deg;--cy:#06B6D4;--cyd:#1E40AF;--blue:#1E3A8A;--am:#0891B2;--amd:#0E7490;--amsoft:#ECFEFF;--chip:#ECFEFF;--net:30,58,138;--shadow:0 18px 44px rgba(30,58,138,.10)}
 #tiles,#ai{filter:hue-rotate(var(--hue))}
 
 /* thang chữ (1pt = 2px trên khung 1920): tiêu đề slide 30pt, tiêu đề khối 20pt, nội dung 18pt, chú thích 14pt */
