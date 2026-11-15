@@ -103,6 +103,11 @@ section[data-sid="13"] .ttl::after{left:50%;translate:-50% 0}
 .card p.big{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .tbl{box-shadow:0 14px 34px rgba(var(--net),.08)}
 .tbl>.th{background:linear-gradient(90deg,var(--chip),var(--amsoft))}
+.lecref{position:absolute;right:128px;bottom:34px;display:flex;align-items:center;gap:10px;font-size:22px;font-weight:600;line-height:1;color:var(--cyd);background:var(--chip);border:1.5px solid var(--line);border-radius:999px;padding:8px 18px 8px 8px;max-width:1000px;white-space:nowrap;opacity:0;transition:opacity .6s ease .8s}
+.slide.active .lecref{opacity:1}
+.lecref span{font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;background:linear-gradient(90deg,var(--g1),var(--g2));border-radius:999px;padding:6px 12px}
+.accent .lecref{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff}
+#stage.editing .lecref{opacity:1}
 /* chữ */
 #stage{font-family:var(--f-b);-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
 h1,.ttl,.card h3,.kw,.hub,.mh,.step p,.chain span{letter-spacing:-.012em;word-spacing:.06em}
@@ -311,6 +316,7 @@ body.editing #notes{display:none}
     </div>
     <div style="display:flex;gap:10px;width:1664px;align-items:stretch"><div class="card a pop" style="flex:1;flex-direction:row;align-items:center;gap:18px;padding:14px 22px;min-width:0;--d:.7s"><div class="ico" style="flex:none;width:80px;height:80px;border-radius:20px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><ellipse cx="32" cy="32" rx="26" ry="10"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(120 32 32)"/></g><circle cx="32" cy="32" r="5" fill="#fff"/></svg></div><div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h3>Nghiên cứu cơ bản</h3><p>Tìm bản chất, quy luật</p></div></div><p class="arrow a" style="--d:1s;font-size:40px">→</p><div class="card a pop" style="flex:1;flex-direction:row;align-items:center;gap:18px;padding:14px 22px;min-width:0;--d:.9s"><div class="ico" style="flex:none;width:80px;height:80px;border-radius:20px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3.5"><circle cx="32" cy="32" r="25"/><circle cx="32" cy="32" r="15"/></g><circle cx="32" cy="32" r="5" fill="#fff"/></svg></div><div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h3>Nghiên cứu ứng dụng</h3><p>Hướng tới mục tiêu thực tiễn</p></div></div><p class="arrow a" style="--d:1.2s;font-size:40px">→</p><div class="card a pop" style="flex:1;flex-direction:row;align-items:center;gap:18px;padding:14px 22px;min-width:0;--d:1.1s"><div class="ico" style="flex:none;width:80px;height:80px;border-radius:20px"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M24 8h16M27 8v16L12 50a5 5 0 0 0 4.5 7h31a5 5 0 0 0 4.5-7L37 24V8"/><path d="M18 42h28"/></g></svg></div><div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h3>Triển khai thực nghiệm</h3><p>Tạo, cải tiến sản phẩm, quy trình</p></div></div></div>
     <p class="callout a" style="width:1664px;padding:12px 30px"><b>Ví dụ:</b> ngân hàng thử mô hình gợi ý sản phẩm trên nhóm khách nhỏ, chưa biết có hiệu quả → <b>là R&amp;D</b>. Cài phần mềm có sẵn, mua dây chuyền mới → <b>chưa phải R&amp;D</b>.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Bản chất ĐMST: chuyển hóa tri thức R&amp;D · CĐ2 – Mô hình tuyến tính</p>
   </section>
   <!-- 2. Câu hỏi -->
   <section data-sid="1" class="slide" data-t="Câu hỏi nghiên cứu" aria-label="Câu hỏi nghiên cứu" style="justify-content:center">
@@ -331,6 +337,7 @@ body.editing #notes{display:none}
         <p class="lbl" style="color:var(--ink3)">Minh họa khái niệm, không phải số liệu</p>
       </div>
     </div>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Câu hỏi thảo luận dành cho NCS</p>
   </section>
 
   <!-- 3. Khái niệm -->
@@ -345,6 +352,7 @@ body.editing #notes{display:none}
       <div class="card a" style="align-items:flex-start;gap:16px;padding:30px 26px;min-height:300px"><p class="num">5</p><h3>Chuyển giao được</h3><p style="font-size:31px">Kết quả tái tạo được</p></div>
     </div>
     <p class="callout a" style="width:1664px"><b>Hàm ý:</b> phần mềm thường quy, bảo trì → chưa đủ năm tiêu chí → không tính là R&amp;D. Đo R&amp;D trong dịch vụ cần tiêu chí riêng.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Đặc điểm ĐMST: tính mới, tính bất định</p>
   </section>
 
   <!-- 4. Chiến lược công nghệ -->
@@ -358,6 +366,7 @@ body.editing #notes{display:none}
       <div class="card a left" style="grid-column:1;grid-row:2;gap:10px;padding:26px 32px;justify-content:center"><p class="chip">Kiến trúc</p><h3 style="font-size:40px">Đổi linh kiện hay đổi cách ghép?</h3><p class="cite" style="font-size:29px">Henderson &amp; Clark (1990)</p></div>
       <div class="card a right" style="grid-column:3;grid-row:2;gap:10px;padding:26px 32px;justify-content:center"><p class="chip">Thời điểm</p><h3 style="font-size:40px">Đi trước hay giữ quyền chọn?</h3><p class="cite" style="font-size:29px">McGrath (1997); Pisano (2015)</p></div>
     </div>
+    <p class="lecref"><span>Bài giảng</span>CĐ3 – Chiến lược, quản trị công nghệ · CĐ2 – Henderson–Clark</p>
   </section>
 
   <!-- 5. Lý thuyết -->
@@ -365,7 +374,8 @@ body.editing #notes{display:none}
     <p class="kick a">Nền tảng lý thuyết</p>
     <h2 class="ttl split" style="width:1664px">Năm dòng lý thuyết, năm cách giải thích khác biệt</h2>
     <div class="tbl a" style="width:1664px"><p class="th">Trường phái</p><p class="th">Câu hỏi trung tâm</p><p class="th">Nguồn tiêu biểu</p><h3 class="kw a left">Nguồn lực và tiến hóa</h3><p class="sub a">Vì sao doanh nghiệp khác nhau bền vững?</p><p class="cite a right">Nelson &amp; Winter (1982)</p><h3 class="kw a left">Năng lực hấp thụ</h3><p class="sub a">Vì sao cùng nguồn ngoài, mức hưởng lợi khác nhau?</p><p class="cite a right">Cohen &amp; Levinthal (1990)</p><h3 class="kw a left">Năng lực động</h3><p class="sub a">Làm sao thích ứng khi môi trường đổi?</p><p class="cite a right">Teece và cs. (1997); Teece (2007)</p><h3 class="kw a left">Song thủ</h3><p class="sub a">Làm sao vừa khai thác vừa khám phá?</p><p class="cite a right">March (1991); O’Reilly &amp; Tushman (2013)</p><h3 class="kw a left">Đổi mới mở</h3><p class="sub a">Nên mở ranh giới đến đâu?</p><p class="cite a right">Chesbrough (2003)</p></div>
-      </section>
+        <p class="lecref"><span>Bài giảng</span>CĐ1 – Mục tiêu 2; năng lực động (Teece)</p>
+  </section>
 
   <!-- 6. Bằng chứng (slide nhấn) -->
   <section data-sid="5" class="slide accent" data-t="Bằng chứng" aria-label="Bằng chứng" style="gap:32px">
@@ -379,6 +389,7 @@ body.editing #notes{display:none}
       <div class="card a pop"><p class="big"><span data-count="64.1" data-dec="1">64,1</span>%</p><p>Chi R&amp;D do doanh nghiệp tài trợ (hạng 8)</p></div>
     </div>
     <p class="note a">Nguồn: WIPO, Global Innovation Index 2025. Số liệu cấp quốc gia, chưa có số liệu riêng cho ĐBSCL.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Hướng 5 · CĐ3 – Tỷ lệ đầu tư R&amp;D</p>
   </section>
 
   <!-- 7. Khung tích hợp -->
@@ -415,6 +426,7 @@ body.editing #notes{display:none}
       <div class="mflb a" style="--d:2.3s">Vòng phản hồi: kết quả quay lại điều chỉnh chiến lược</div>
       <div class="me a" style="--d:2.9s"><b>E. Điều kiện biên</b><span>Ngành (dịch vụ hay chế tạo) · quy mô · giai đoạn phát triển</span><span>chất lượng dữ liệu · thể chế · cách đo lường</span></div>
     </div>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Kết luận bài giảng; định hướng 2 (cơ chế, điều kiện)</p>
   </section>
 
   <!-- 8. Giới hạn -->
@@ -424,6 +436,7 @@ body.editing #notes{display:none}
     <div class="grid" style="grid-template-columns:repeat(6,1fr);gap:24px">
       <div class="card a" style="grid-column:span 2;flex-direction:row;align-items:flex-start;gap:24px;padding:28px 30px"><p class="num">1</p><div style="display:flex;flex-direction:column;gap:8px"><h3>Tự báo cáo, một nguồn</h3><p style="font-size:31px">Cùng người trả lời cả nguyên nhân lẫn kết quả</p></div></div><div class="card a" style="grid-column:span 2;flex-direction:row;align-items:flex-start;gap:24px;padding:28px 30px"><p class="num">2</p><div style="display:flex;flex-direction:column;gap:8px"><h3>Đo lường lệch về chế tạo</h3><p style="font-size:31px">Chỉ số R&amp;D, sáng chế phản ánh kém dịch vụ</p></div></div><div class="card a" style="grid-column:span 2;flex-direction:row;align-items:flex-start;gap:24px;padding:28px 30px"><p class="num">3</p><div style="display:flex;flex-direction:column;gap:8px"><h3>Nội sinh</h3><p style="font-size:31px">Doanh nghiệp giỏi vừa chi nhiều vừa đạt kết quả cao</p></div></div><div class="card a" style="grid-column:span 3;flex-direction:row;align-items:flex-start;gap:24px;padding:28px 30px"><p class="num">4</p><div style="display:flex;flex-direction:column;gap:8px"><h3>Chuyển giao sang nền kinh tế đuổi kịp</h3><p style="font-size:31px">Văn liệu chủ yếu từ nền kinh tế phát triển</p></div></div><div class="card a" style="grid-column:span 3;flex-direction:row;align-items:flex-start;gap:24px;padding:28px 30px"><p class="num">5</p><div style="display:flex;flex-direction:column;gap:8px"><h3>Chất lượng bằng chứng về AI</h3><p style="font-size:31px">Không đồng đều, cần kiểm kỹ nguồn</p></div></div>
     </div>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Yêu cầu thuyết trình: phản biện giới hạn</p>
   </section>
 
   <!-- 9. Đề xuất -->
@@ -440,6 +453,7 @@ body.editing #notes{display:none}
       </div>
       <div class="card a right" style="flex-direction:row;align-items:center;gap:24px;padding:22px 30px"><p class="num" style="background:var(--chip);color:var(--cyd);box-shadow:none;border:2px solid var(--line)">B</p><div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:37px">Tổ hợp điều kiện dẫn tới kết quả R&amp;D</h3><p class="chip">fsQCA – tập mờ</p></div></div><div class="card a right" style="flex-direction:row;align-items:center;gap:24px;padding:22px 30px"><p class="num" style="background:var(--chip);color:var(--cyd);box-shadow:none;border:2px solid var(--line)">C</p><div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:37px">Quản trị AI trong doanh nghiệp</h3><p class="chip">Delphi – chuyên gia nhiều vòng</p></div></div><div class="card a right" style="flex-direction:row;align-items:center;gap:24px;padding:22px 30px"><p class="num" style="background:var(--chip);color:var(--cyd);box-shadow:none;border:2px solid var(--line)">D</p><div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:37px">Nhận diện R&amp;D trong dịch vụ tài chính</h3><p class="chip">Tiêu chí Frascati</p></div></div>
     </div>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Hướng 1, 2, 4; nghiên cứu tình huống</p>
   </section>
 
   <!-- 10. Hàm ý quản trị -->
@@ -450,6 +464,7 @@ body.editing #notes{display:none}
       <div class="card a pop step4"><p class="num">1</p><h3 style="font-size:38px">Phân định</h3><p style="font-size:31px">R&amp;D hay vận hành thường quy, rồi mới đo</p></div><p class="arrow a">→</p><div class="card a pop step4"><p class="num">2</p><h3 style="font-size:38px">Biên giới và danh mục</h3><p style="font-size:31px">Quyết định của lãnh đạo, không chỉ dòng ngân sách</p></div><p class="arrow a">→</p><div class="card a pop step4"><p class="num">3</p><h3 style="font-size:38px">Năng lực hấp thụ</h3><p style="font-size:31px">Đội dữ liệu, quy trình học từ thử nghiệm</p></div><p class="arrow a">→</p><div class="card a pop step4"><p class="num">4</p><h3 style="font-size:38px">Thử nhỏ, quyết theo cổng</h3><p style="font-size:31px">Xem thử nghiệm như quyền chọn, mở rộng khi có bằng chứng</p></div>
     </div>
     <p class="callout a" style="font-size:32px;width:1664px;padding:18px 30px"><b>Ví dụ minh họa (giả định):</b> doanh nghiệp bảo hiểm thử gợi ý sản phẩm theo hành vi ở một nhóm khách nhỏ, đo kết quả, rồi mới quyết định mở rộng.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ3 – Quản trị R&amp;D, dự án đổi mới · CĐ1 – Tính bất định</p>
   </section>
 
   <!-- 11. Hàm ý chính sách, lý thuyết -->
@@ -461,6 +476,7 @@ body.editing #notes{display:none}
       <div class="card a right" style="gap:22px;padding:34px 40px"><h3 style="color:var(--cyd);font-size:42px">Cho lý thuyết</h3><ul class="ticks"><li>Nối năm dòng lý thuyết thành <b>chuỗi nhân quả kiểm định được</b></li><li>Kiểm tra <b>điều kiện biên</b>: nền kinh tế đuổi kịp, khu vực dịch vụ</li></ul></div>
     </div>
     <p class="callout a" style="width:1664px"><b>Lưu ý:</b> đây là hàm ý suy ra từ khung khái niệm, chưa phải kết luận thực nghiệm.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Yếu tố bên ngoài: chính sách, thể chế</p>
   </section>
 
   <!-- 12. Luận án 1 -->
@@ -470,6 +486,7 @@ body.editing #notes{display:none}
     <p class="txt a" style="width:1664px">Áp tiêu chí Frascati, cần thỏa bốn điều kiện:</p>
     <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:24px"><div class="card a pop" style="gap:18px;padding:30px 28px;min-height:280px"><p class="num">1</p><p style="font-size:33px;color:var(--ink)">Giải quyết <b>bất định kỹ thuật thật</b>, không chỉ cấu hình sẵn có</p></div><div class="card a pop" style="gap:18px;padding:30px 28px;min-height:280px"><p class="num">2</p><p style="font-size:33px;color:var(--ink)">Có <b>thiết kế thử nghiệm</b> và ghi chép có hệ thống</p></div><div class="card a pop" style="gap:18px;padding:30px 28px;min-height:280px"><p class="num">3</p><p style="font-size:33px;color:var(--ink)">Tạo <b>tri thức hoặc phương pháp mới</b>, không chỉ triển khai</p></div><div class="card a pop" style="gap:18px;padding:30px 28px;min-height:280px"><p class="num">4</p><p style="font-size:33px;color:var(--ink)">Kết quả <b>tái tạo hoặc chuyển giao</b> được trong tổ chức</p></div></div>
     <p class="callout a" style="width:1664px;font-size:33px;padding:18px 30px"><b>Dự đoán có thể bị bác bỏ:</b> các ngân hàng thỏa bốn điều kiện ở mức khác nhau, và khác biệt đó giải thích khác biệt về mức cảm nhận cá nhân hóa của khách hàng.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Liên hệ đề tài luận án; đổi mới marketing</p>
   </section>
 
   <!-- 13. Luận án 2 -->
@@ -483,6 +500,7 @@ body.editing #notes{display:none}
       <div class="card a" style="padding:28px 30px;gap:12px;min-height:210px"><p class="chip">Lựa chọn (c)</p><p style="font-size:33px;color:var(--ink)">Đưa vào phần bàn luận và hướng nghiên cứu tiếp theo.</p></div>
     </div>
     <p class="callout a" style="width:1664px;font-size:32px;padding:16px 30px"><b>Xin ý kiến thầy:</b> lựa chọn nào phù hợp nhất với luận án đã chốt?</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Logic học phần → liên hệ luận án</p>
   </section>
 
   <!-- 14. Kết luận -->
@@ -495,6 +513,7 @@ body.editing #notes{display:none}
       <div class="card a pop" style="flex:1;align-items:center;justify-content:flex-start;gap:12px;padding:30px 28px;--d:1.8s"><p class="lbl" style="font-family:var(--f-d);font-weight:800;font-size:46px!important;color:var(--am)">3</p><p class="txt" style="font-size:34px;text-align:center">Hướng A là bước tiếp theo, gắn trực tiếp với luận án.</p></div>
     </div>
     <p class="a pop" style="font-family:var(--f-d);font-weight:700;font-size:43px;color:var(--amd);--d:2.2s;margin-top:10px">Xin trân trọng cảm ơn thầy và các bạn đã lắng nghe.</p>
+    <p class="lecref"><span>Bài giảng</span>CĐ1 – Kết luận bài giảng (ý thứ tư)</p>
   </section>
 
   <div id="prog"></div>
