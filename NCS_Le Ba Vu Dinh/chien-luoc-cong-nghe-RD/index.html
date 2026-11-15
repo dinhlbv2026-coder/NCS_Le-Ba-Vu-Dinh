@@ -146,8 +146,9 @@ h1{font-family:var(--f-d);font-weight:800;font-size:96px;line-height:1.06;text-w
 .tbl>*{padding:8px 26px;border-top:2px solid var(--line);display:flex;align-items:center}
 .tbl>.th{border-top:0;background:var(--chip);font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyd);padding:14px 28px}
 .tbl .kw{font-size:34px}
-.sg{flex:1;display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:18px;background:var(--chip);border:2px solid var(--line)}.sg span{flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,var(--g1),var(--g2));color:#fff;font-family:var(--f-d);font-weight:800;font-size:28px}.slide .sg p{font-size:31px!important;white-space:nowrap;font-weight:700;color:var(--ink);line-height:1.15}
-.gate{flex:none;width:34px;height:34px;margin:0 10px;rotate:45deg;background:var(--am);border-radius:6px;box-shadow:0 4px 10px rgba(var(--net),.2)}.tbl .sub{font-size:31px;color:var(--ink)}.tbl .cite{font-size:27px}
+.refs{column-count:3;column-gap:44px}.slide .refs p{font-size:19.5px!important;line-height:1.3;color:var(--ink);padding-left:1.6em;text-indent:-1.6em;margin:0 0 6px;break-inside:avoid;font-family:var(--f-b,inherit)}.refs em{font-style:italic}.refs mark{background:var(--amsoft);color:var(--amd);padding:0 4px;border-radius:4px}
+.sg{flex:1 1 auto;display:flex;align-items:center;gap:10px;padding:12px 14px;min-width:0;border-radius:18px;background:var(--chip);border:2px solid var(--line)}.sg span{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,var(--g1),var(--g2));color:#fff;font-family:var(--f-d);font-weight:800;font-size:28px}.slide .sg p{font-size:27px!important;white-space:nowrap;font-weight:700;color:var(--ink);line-height:1.15}
+.gate{flex:none;width:26px;height:26px;margin:0 8px;rotate:45deg;background:var(--am);border-radius:6px;box-shadow:0 4px 10px rgba(var(--net),.2)}.tbl .sub{font-size:31px;color:var(--ink)}.tbl .cite{font-size:27px}
 .step4{flex:1;display:flex;flex-direction:column;gap:14px;padding:30px 28px;min-height:330px}
 .arrow{flex:none;align-self:center;font-size:44px;color:var(--cyd);font-weight:800;font-family:var(--f-d)}
 .ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
@@ -379,9 +380,9 @@ body.editing #notes{display:none}
     <p class="kick a">Quản trị R&amp;D trong thực hành</p>
     <h2 class="ttl split" style="width:1664px">Đi qua cổng nào, mở ranh giới đến đâu?</h2>
     <div class="card a" style="width:1664px;flex:none;gap:14px;padding:20px 34px">
-      <h3>Phát triển sản phẩm mới: Stage-Gate <span class="cite" style="font-weight:500">Cooper (1990)</span></h3>
-      <div style="display:flex;align-items:center;gap:0"><div class="sg a pop" style="--d:0.6s"><span>1</span><p>Ý tưởng</p></div><div class="gate a pop" style="--d:0.8s" aria-hidden="true"></div><div class="sg a pop" style="--d:0.9s"><span>2</span><p>Nghiên cứu khả thi</p></div><div class="gate a pop" style="--d:1.1s" aria-hidden="true"></div><div class="sg a pop" style="--d:1.2s"><span>3</span><p>Thử nghiệm</p></div><div class="gate a pop" style="--d:1.4s" aria-hidden="true"></div><div class="sg a pop" style="--d:1.5s"><span>4</span><p>Tung ra thị trường</p></div></div>
-      <p>Mỗi cổng quyết định <b>tiếp tục hay dừng</b>; tiêu chí ở cổng phải phản ánh chiến lược.</p>
+      <h3>Phát triển sản phẩm mới: Stage-Gate <span class="cite" style="font-weight:500">Cooper (1990); Đào Duy Huân &amp; Nguyễn Thị Mỹ Dung (2026), Hình 7.1</span></h3>
+      <div style="display:flex;align-items:center;gap:0"><div class="sg a pop" style="--d:0.6s"><span>1</span><p>Ý tưởng</p></div><div class="gate a pop" style="--d:0.75s" aria-hidden="true"></div><div class="sg a pop" style="--d:0.85s"><span>2</span><p>Sàng lọc</p></div><div class="gate a pop" style="--d:1.0s" aria-hidden="true"></div><div class="sg a pop" style="--d:1.1s"><span>3</span><p>Phát triển</p></div><div class="gate a pop" style="--d:1.25s" aria-hidden="true"></div><div class="sg a pop" style="--d:1.35s"><span>4</span><p>Thử nghiệm</p></div><div class="gate a pop" style="--d:1.5s" aria-hidden="true"></div><div class="sg a pop" style="--d:1.6s"><span>5</span><p>Thương mại hóa</p></div></div>
+      <p>Tại mỗi cổng: <b>tiếp tục · điều chỉnh · tạm dừng · dừng dự án</b>, theo tiêu chí của chiến lược.</p>
     </div>
     <div style="display:flex;gap:26px;width:1664px;align-items:stretch">
       <div class="card a left" style="flex:1.3;flex-direction:row;gap:22px;padding:20px 28px;align-items:center;min-width:0">
@@ -394,7 +395,7 @@ body.editing #notes{display:none}
         <p>Vẫn cần <b>R&amp;D nội bộ</b> để hấp thụ tri thức bên ngoài.</p>
       </div>
     </div>
-    <p class="lecref"><span>Bài giảng</span>CĐ3 – Quản trị R&amp;D, đổi mới mở · Ôn tập câu 5, 7, 8</p>
+    <p class="lecref"><span>Bài giảng</span>Giáo trình (2026), Ch.7, Hình 7.1 · CĐ3 – Đổi mới mở · Ôn tập câu 5, 7, 8</p>
   </section>
 
   <!-- 5. Lý thuyết -->
@@ -531,6 +532,13 @@ body.editing #notes{display:none}
     <p class="a pop" style="font-family:var(--f-d);font-weight:700;font-size:43px;color:var(--amd);--d:2.2s;margin-top:10px">Xin trân trọng cảm ơn thầy và các bạn đã lắng nghe.</p>
     <p class="lecref"><span>Bài giảng</span>CĐ1 – Kết luận bài giảng (ý thứ tư)</p>
   </section>
+  <!-- 16. Tài liệu tham khảo -->
+  <section data-sid="16" class="slide" data-t="Tài liệu tham khảo" aria-label="Tài liệu tham khảo" style="gap:10px">
+    <p class="kick a">Tài liệu được dẫn trên slide · APA 7</p>
+    <h2 class="ttl split" style="width:1664px">Tài liệu tham khảo</h2>
+    <div class="refs a" style="width:1664px"><p>Bộ Chính trị. (2024). <em>Nghị quyết số 57-NQ/TW ngày 22/12/2024 về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia</em>.</p><p>Chesbrough, H. W. (2003). <em>Open innovation: The new imperative for creating and profiting from technology</em>. Harvard Business School Press.</p><p>Cohen, W. M., &amp; Levinthal, D. A. (1990). Absorptive capacity: A new perspective on learning and innovation. <em>Administrative Science Quarterly, 35</em>(1), 128–152.</p><p>Cooper, R. G. (1990). Stage-gate systems: A new tool for managing new products. <em>Business Horizons, 33</em>(3), 44–54.</p><p>Cooper, R. G., Edgett, S. J., &amp; Kleinschmidt, E. J. (1999). New product portfolio management: Practices and performance. <em>Journal of Product Innovation Management, 16</em>(4), 333–351.</p><p>Doan, H. T. T., &amp; Trinh, L. Q. (2023). <em>In-house R&amp;D, technology transfer, and firms’ performance</em> (ADBI Working Paper No. 1371). Asian Development Bank Institute.</p><p>Đào Duy Huân, &amp; Nguyễn Thị Mỹ Dung (Đồng chủ biên). (2026). <em>Giáo trình Quản trị đổi mới sáng tạo</em>. Nhà xuất bản Kinh tế Thành phố Hồ Chí Minh.</p><p>Ford, D. (1988). Develop your technology strategy. <em>Long Range Planning, 21</em>(5), 85–95.</p><p>Henderson, R. M., &amp; Clark, K. B. (1990). Architectural innovation: The reconfiguration of existing product technologies and the failure of established firms. <em>Administrative Science Quarterly, 35</em>(1), 9–30.</p><p>Hoa, H. C., Ly, T. C., &amp; Nguyen, V. P. (2026). The innovation paradox: Institutional drivers and capability orchestration in Vietnamese enterprises. <em>Problems and Perspectives in Management, 24</em>(3), 627–645.</p><p>Laursen, K., &amp; Salter, A. (2006). Open for innovation: The role of openness in explaining innovation performance among U.K. manufacturing firms. <em>Strategic Management Journal, 27</em>(2), 131–150.</p><p>March, J. G. (1991). Exploration and exploitation in organizational learning. <em>Organization Science, 2</em>(1), 71–87.</p><p>McGrath, R. G. (1997). A real options logic for initiating technology positioning investments. <em>Academy of Management Review, 22</em>(4).</p><p>Nelson, R. R., &amp; Winter, S. G. (1982). <em>An evolutionary theory of economic change</em>. Harvard University Press.</p><p>Nguyen, T. P. T., Nghiem, P. H., &amp; Vo, T. T. H. (2022). Building capacity for innovation: Evidence from Vietnam. <em>Asian Economics Letters, 3</em>(4).</p><p>OECD. (2015). <em>Frascati Manual 2015: Guidelines for collecting and reporting data on research and experimental development</em>. OECD Publishing.</p><p>O’Reilly, C. A., &amp; Tushman, M. L. (2013). Organizational ambidexterity: Past, present, and future. <em>Academy of Management Perspectives, 27</em>(4).</p><p>Pisano, G. P. (1990). The R&amp;D boundaries of the firm: An empirical analysis. <em>Administrative Science Quarterly, 35</em>(1), 153–176.</p><p>Pisano, G. P. (2015). You need an innovation strategy. <em>Harvard Business Review, 93</em>(6), 44–54.</p><p>Quốc hội. (2025). <em>Luật Khoa học, công nghệ và đổi mới sáng tạo số 93/2025/QH15</em>.</p><p>Teece, D. J. (2007). Explicating dynamic capabilities: The nature and microfoundations of (sustainable) enterprise performance. <em>Strategic Management Journal, 28</em>(13), 1319–1350.</p><p>Teece, D. J., Pisano, G., &amp; Shuen, A. (1997). Dynamic capabilities and strategic management. <em>Strategic Management Journal, 18</em>(7), 509–533.</p></div>
+  </section>
+
 
   <div id="prog"></div>
   <p id="foot"></p>
@@ -564,7 +572,7 @@ body.editing #notes{display:none}
   </div>
   <div class="ef"><div class="row"><button type="button" data-a="save" class="pri">Lưu</button><button type="button" data-a="export">Xuất HTML</button></div><p id="est" role="status"></p></div>
 </aside>
-<script type="application/json" id="deck-edits">{"v":2,"text":{},"style":{},"add":[],"del":[],"order":["0","14","1","2","3","15","4","6","7","8","9","10","11","12","13"],"hidden":[],"notes":{}}</script>
+<script type="application/json" id="deck-edits">{"v":2,"text":{},"style":{},"add":[],"del":[],"order":["0","14","1","2","3","15","4","6","7","8","9","10","11","12","13","16"],"hidden":[],"notes":{}}</script>
 
 <div id="bar" role="toolbar" aria-label="Điều khiển trình chiếu">
   <button id="prev" type="button" aria-label="Slide trước">‹ Trước</button>
@@ -634,7 +642,8 @@ body.editing #notes{display:none}
     ["0:45","Lập luận ba bước: PER khác nhau giữa các ngân hàng; khác biệt truyền qua các biến trung gian của mô hình; dẫn tới gắn bó và lòng trung thành. Không thêm biến mới vào mô hình đã chốt. Ba lựa chọn phạm vi (a), (b), (c); xin ý kiến thầy."],
     ["0:30","Tóm lại: hiệu quả R&D phụ thuộc một chuỗi lựa chọn từ chiến lược đến quản trị và năng lực. Khung cho phép kiểm định; giới hạn cần xử lý trong thiết kế; hướng A là bước tiếp theo gắn với luận án. Cảm ơn và mời đặt câu hỏi."],
     ["0:45","R&D là gì: định nghĩa của Frascati 2015 (sáng tạo, có hệ thống, làm tăng kho tri thức, tìm ứng dụng mới). Ba loại hoạt động: nghiên cứu cơ bản, nghiên cứu ứng dụng, triển khai thực nghiệm. R&D hẹp hơn đổi mới. Ví dụ ngân hàng thử mô hình gợi ý sản phẩm là R&D; cài phần mềm có sẵn thì không."]
-    ,["1:15","Quản trị R&D trong thực hành, lấy từ Bảng 2 và Mục 1.2.5, 1.3. Stage-Gate của Cooper (1990): ý tưởng, khả thi, thử nghiệm, tung ra thị trường; mỗi cổng quyết định tiếp hay dừng. Đổi mới mở (Chesbrough, 2003) có lợi ích theo chữ U ngược (Laursen & Salter, 2006); đường cong là minh họa hình dạng, không phải số liệu. Ba cách có công nghệ: tự làm, mua, hợp tác với fintech hay trường đại học; vẫn cần R&D nội bộ để hấp thụ."]
+    ,["1:15","Quản trị R&D trong thực hành, lấy từ Bảng 2 và Mục 1.2.5, 1.3. Stage-Gate của Cooper (1990), vẽ theo Hình 7.1 của giáo trình: ý tưởng, sàng lọc, phát triển, thử nghiệm, thương mại hóa; tại mỗi cổng có bốn quyết định: tiếp tục, điều chỉnh, tạm dừng, dừng dự án. Bảng 2 của tiểu luận gộp thành bốn cổng (ý tưởng, khả thi, thử nghiệm, tung ra thị trường); nếu thầy hỏi thì nói rõ slide theo giáo trình. Đổi mới mở (Chesbrough, 2003) có lợi ích theo chữ U ngược (Laursen & Salter, 2006); đường cong là minh họa hình dạng, không phải số liệu. Ba cách có công nghệ: tự làm, mua, hợp tác với fintech hay trường đại học; vẫn cần R&D nội bộ để hấp thụ."]
+    ,["dự phòng","Danh mục các tài liệu được dẫn trên slide, trình bày theo APA 7. Danh mục đầy đủ kèm đường dẫn và DOI nằm trong tiểu luận. Giáo trình của thầy Đào Duy Huân và cô Nguyễn Thị Mỹ Dung là nguồn cho Hình 7.1 (Stage-Gate)."]
   ];
   var stage=document.getElementById('stage'),vp=document.getElementById('viewport'),slides=[].slice.call(stage.querySelectorAll('.slide')),N=slides.length;
   function NT(i){var sid=slides[i].dataset.sid;return EDITS.notes[sid]!=null?[NOTES[+sid][0],EDITS.notes[sid]]:NOTES[+sid]}
